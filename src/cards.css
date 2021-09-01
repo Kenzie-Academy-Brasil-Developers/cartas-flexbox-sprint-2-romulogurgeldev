@@ -20,11 +20,18 @@ body{
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
 }
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
+    display: flex;
     padding: 15px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
@@ -37,6 +44,7 @@ body{
 }
 
 .card__price {
+    width: 100%;
     text-align: center;
     color: #57727C;
     font-size: 12px;
@@ -48,23 +56,26 @@ body{
 
 .cardGroup {
     /* display */
-    width: 60%;
+    height: 170px ;
+    width: 710px;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items:stretch;
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-      flex: 0 0 auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      align-self: flex-end;
+      flex-grow: 1;
       width: 33%;
       border-radius: 0;
-      align-items:center;
       text-align: center;
-      flex-wrap: wrap;
     }
   
     .cardGroup__card {
@@ -73,25 +84,13 @@ body{
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
-      flex: 0 0 auto;
+      flex-grow: 1;
+      align-items: center;
     }
-    @media screen and (min-width: 375px) {
-      #buttonInput {
-        right: 80px;
+
+    @media  (min-width: 320px) {
+       .cardGroup{
+         width: 320px;
+         flex-direction: row;
+       }
       }
-    }
-    @media screen and (min-width: 425px) {
-      #buttonInput {
-        right: 110px;
-      }
-    }
-    @media screen and (min-width: 768px) {
-      #buttonInput {
-        right: 280px;
-      }
-    }
-    @media screen and (min-width: 1440px) {
-      #buttonInput {
-        left: 1060px;
-      }
-    }
