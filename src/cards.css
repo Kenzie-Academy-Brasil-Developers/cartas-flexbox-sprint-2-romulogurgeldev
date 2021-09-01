@@ -5,6 +5,13 @@ html {
     height: 100%;
     background-color: #FFFFFF;
 }
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .icon {color: #BCD2DA;}
 
@@ -41,17 +48,23 @@ html {
 
 .cardGroup {
     /* display */
-  
+    width: 60%;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items:stretch;
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
-      border: none;
+      flex: 0 0 auto;
+      width: 33%;
       border-radius: 0;
+      align-items:center;
+      text-align: center;
+      flex-wrap: wrap;
     }
   
     .cardGroup__card {
@@ -60,4 +73,25 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex: 0 0 auto;
+    }
+    @media screen and (min-width: 375px) {
+      #buttonInput {
+        right: 80px;
+      }
+    }
+    @media screen and (min-width: 425px) {
+      #buttonInput {
+        right: 110px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      #buttonInput {
+        right: 280px;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      #buttonInput {
+        left: 1060px;
+      }
     }
